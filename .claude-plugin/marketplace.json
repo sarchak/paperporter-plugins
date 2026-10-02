@@ -1,0 +1,13 @@
+{
+  "name": "paperporter",
+  "owner": { "name": "Shrikar Archak", "email": "support@paperporter.com" },
+  "metadata": { "description": "PaperPorter plugins for filling official PDF forms." },
+  "plugins": [
+    {
+      "name": "paperporter",
+      "source": "./paperporter",
+      "description": "Fill official PDF forms, such as city permit applications, in their original layout.",
+      "category": "productivity"
+    }
+  ]
+}

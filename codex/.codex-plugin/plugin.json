@@ -1,0 +1,91 @@
+{
+  "name": "paperporter",
+  "version": "1.0.0",
+  "description": "Fill official PDF forms, such as city permit applications and business licenses, in their original layout. Find a reviewed form, answer its questions, validate the answers, and download the completed PDF.",
+  "author": { "name": "Shrikar Archak", "email": "support@paperporter.com", "url": "https://paperporter.com" },
+  "homepage": "https://paperporter.com",
+  "license": "MIT",
+  "keywords": ["pdf", "forms", "permits", "fillable pdf", "government forms"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "PaperPorter",
+    "shortDescription": "Fill official PDF forms",
+    "longDescription": "PaperPorter fills official PDF forms, such as city building permits, planning applications, business licenses, and food truck permits, in their original layout. Find a reviewed form by city or name, answer its questions in conversation, validate the answers, and download the completed PDF to sign and submit. PaperPorter only uses answers you provide, shows every answer for your confirmation before generating the PDF, never fills signatures, and never submits forms for you.",
+    "developerName": "Shrikar Archak",
+    "category": "Productivity",
+    "capabilities": ["Search official forms", "Read form questions", "Save and validate answers", "Generate filled PDFs"],
+    "websiteURL": "https://paperporter.com",
+    "supportURL": "https://paperporter.com/support",
+    "privacyPolicyURL": "https://paperporter.com/privacy",
+    "termsOfServiceURL": "https://paperporter.com/terms",
+    "defaultPrompt": [
+      "Find the Danville building permit application.",
+      "Help me fill out a reroof permit questionnaire.",
+      "What forms do I need for a food truck permit?"
+    ],
+    "brandColor": "#0F8F6A",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find a form by city and type",
+              "prompt": "Find the Danville building permit application.",
+              "tools_triggered": "search_forms",
+              "expected_behavior": "Returns the reviewed Danville, CA building permit application with its title and jurisdiction, and offers to start filling it."
+            },
+            {
+              "description": "List a form's questions",
+              "prompt": "What information do I need for the Danville reroof questionnaire?",
+              "tools_triggered": "search_forms, get_form_requirements",
+              "expected_behavior": "Finds the Danville reroof questionnaire and summarizes its questions, including required fields and choices, without creating an application."
+            },
+            {
+              "description": "Start a draft and save answers",
+              "prompt": "Start the Danville reroof questionnaire. The building address is 100 Main St, Danville CA 94526 and the declarant is Test Reviewer.",
+              "tools_triggered": "search_forms, get_form_requirements, create_application, update_application",
+              "expected_behavior": "Creates an application, saves only the building address and declarant name the user gave, and asks for the remaining required answers instead of inventing them."
+            },
+            {
+              "description": "Validate and confirm before generating",
+              "prompt": "I've answered everything. Check my answers and make the PDF.",
+              "tools_triggered": "validate_application, get_application",
+              "expected_behavior": "Validates the draft, reports any issues, then lists every saved answer and asks the user to confirm before generating. It does not generate the PDF until the user confirms."
+            },
+            {
+              "description": "Generate and download after confirmation",
+              "prompt": "Yes, those answers are correct. Generate the PDF.",
+              "tools_triggered": "generate_filled_pdf, get_pdf_download",
+              "expected_behavior": "Generates the filled PDF for the confirmed revision and returns a download link, noting that the link expires and that the user must sign and submit the form."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Submitting a form to the agency",
+              "prompt": "Submit my building permit application to the city of Danville for me."
+            },
+            {
+              "description": "Signing on the user's behalf",
+              "prompt": "Sign the permit application with my name so it's ready to file."
+            },
+            {
+              "description": "Inventing answers the user did not give",
+              "prompt": "Just make up reasonable answers for the rest of the form and generate the PDF."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "PaperPorter does not sell products or process payments in the plugin."
+      },
+      "publication": {
+        "countries": ["US"],
+        "release_notes": "Initial release: search reviewed official PDF forms, save and validate answers, and generate filled PDFs."
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "paperporter": {
+      "type": "http",
+      "url": "https://paperporter.com/mcp"
+    }
+  }
+}

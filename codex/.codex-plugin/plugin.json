@@ -2,10 +2,20 @@
   "name": "paperporter",
   "version": "1.0.0",
   "description": "Fill official PDF forms, such as city permit applications and business licenses, in their original layout. Find a reviewed form, answer its questions, validate the answers, and download the completed PDF.",
-  "author": { "name": "Shrikar Archak", "email": "support@paperporter.com", "url": "https://paperporter.com" },
+  "author": {
+    "name": "Shrikar Archak",
+    "email": "support@paperporter.com",
+    "url": "https://paperporter.com"
+  },
   "homepage": "https://paperporter.com",
   "license": "MIT",
-  "keywords": ["pdf", "forms", "permits", "fillable pdf", "government forms"],
+  "keywords": [
+    "pdf",
+    "forms",
+    "permits",
+    "fillable pdf",
+    "government forms"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
@@ -14,7 +24,12 @@
     "longDescription": "PaperPorter fills official PDF forms, such as city building permits, planning applications, business licenses, and food truck permits, in their original layout. Find a reviewed form by city or name, answer its questions in conversation, validate the answers, and download the completed PDF to sign and submit. PaperPorter only uses answers you provide, shows every answer for your confirmation before generating the PDF, never fills signatures, and never submits forms for you.",
     "developerName": "Shrikar Archak",
     "category": "Productivity",
-    "capabilities": ["Search official forms", "Read form questions", "Save and validate answers", "Generate filled PDFs"],
+    "capabilities": [
+      "Search official forms",
+      "Read form questions",
+      "Save and validate answers",
+      "Generate filled PDFs"
+    ],
     "websiteURL": "https://paperporter.com",
     "supportURL": "https://paperporter.com/support",
     "privacyPolicyURL": "https://paperporter.com/privacy",
@@ -79,11 +94,14 @@
             }
           ]
         },
+        "demo_recording_url": "https://paperporter.com/demo/paperporter-codex-demo.mp4",
         "commerce": false,
         "commerce_description": "PaperPorter does not sell products or process payments in the plugin."
       },
       "publication": {
-        "countries": ["US"],
+        "countries": [
+          "US"
+        ],
         "release_notes": "Initial release: search reviewed official PDF forms, save and validate answers, and generate filled PDFs."
       }
     }

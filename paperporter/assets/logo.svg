@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="112" fill="#0f8f6a"/>
-  <path d="M156 96h144l76 76v228a24 24 0 0 1-24 24H156a24 24 0 0 1-24-24V120a24 24 0 0 1 24-24z" fill="#ffffff"/>
-  <path d="M300 96v52a24 24 0 0 0 24 24h52z" fill="#ddf3ea"/>
-  <rect x="172" y="200" width="120" height="20" rx="10" fill="#cfd4e0"/>
-  <rect x="172" y="244" width="168" height="20" rx="10" fill="#cfd4e0"/>
-  <path d="M184 336l36 36 84-84" fill="none" stroke="#0f8f6a" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M158 80h150l74 74v260a22 22 0 0 1-22 22H158a22 22 0 0 1-22-22V102a22 22 0 0 1 22-22z" fill="#ffffff"/>
+  <path d="M308 80v74h74z" fill="#b9e6d3"/>
+  <path d="M176 188h96v-36l76 56-76 56v-36h-96z" fill="#0f8f6a"/>
+  <rect x="104" y="290" width="304" height="110" rx="16" fill="#0a6e52"/>
+  <g fill="none" stroke="#ffffff" stroke-width="24" stroke-linejoin="miter" stroke-linecap="butt">
+    <path d="M168 378V312h26a18 18 0 0 1 0 36h-26"/>
+    <path d="M244 378V312h16a28 28 0 0 1 28 28v10a28 28 0 0 1-28 28z"/>
+    <path d="M322 378V312h44M322 344h36"/>
+  </g>
 </svg>

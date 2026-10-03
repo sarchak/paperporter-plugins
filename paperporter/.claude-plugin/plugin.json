@@ -3,8 +3,19 @@
   "displayName": "PaperPorter",
   "version": "1.0.0",
   "description": "Fill official PDF forms, such as city permit applications and business licenses, in their original layout. Find a reviewed form, answer its questions, validate the answers, and download the completed PDF.",
-  "author": { "name": "Shrikar Archak", "email": "support@paperporter.com", "url": "https://paperporter.com" },
+  "author": {
+    "name": "Shrikar Archak",
+    "email": "support@paperporter.com",
+    "url": "https://paperporter.com"
+  },
   "homepage": "https://paperporter.com",
+  "privacyPolicyUrl": "https://paperporter.com/privacy",
   "license": "MIT",
-  "keywords": ["pdf", "forms", "permits", "fillable-pdf", "government-forms"]
+  "keywords": [
+    "pdf",
+    "forms",
+    "permits",
+    "fillable-pdf",
+    "government-forms"
+  ]
 }

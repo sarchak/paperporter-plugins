@@ -26,12 +26,12 @@ The plugin does not run local code, read files on your computer, or send data an
 2. Ask: "Find the Danville building permit application and help me fill it out."
 3. Sign in or create a free PaperPorter account when prompted.
 
-Browse ready forms at https://paperporter.com/permits.
+Browse [ready forms](https://paperporter.com/permits).
 
 ## Privacy Policy
 
-PaperPorter stores your account username, a salted password hash, and the answers and PDFs for applications you create. Applications are kept until you delete them. PaperPorter does not sell personal information or use your answers to train AI models. Hosting is provided by Cloudflare. Read the full policy at https://paperporter.com/privacy.
+PaperPorter stores your account username, a salted password hash, and the answers and PDFs for applications you create. Applications are kept until you delete them. PaperPorter does not sell personal information or use your answers to train AI models. Hosting is provided by Cloudflare. Read the [full privacy policy](https://paperporter.com/privacy).
 
 ## Support
 
-Email support@paperporter.com or visit https://paperporter.com/support. Terms of service: https://paperporter.com/terms.
+Email support@paperporter.com or visit the [support page](https://paperporter.com/support). See the [terms of service](https://paperporter.com/terms).
